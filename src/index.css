@@ -7,7 +7,7 @@
 }
 
 body {
-    background: rgb(2, 0, 31);
+    background: rgb(4, 0, 54);
     color: antiquewhite;
 
 }
@@ -19,13 +19,13 @@ body {
     align-items: center;
     width: 100%;
     box-sizing: border-box;
-    background-color: rgb(2, 0, 31);
+    background-color: rgb(4, 0, 54);
 }
 
 .navbar .nav-link ul {
     display: flex;
     font-weight: 500;
-    
+
 }
 
 .navbar .nav-link ul li a {
@@ -49,27 +49,30 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
     gap: 6rem;
 
+
 }
+
 .home p {
     font-size: 1.0rem;
     font-weight: 100;
     color: rgb(255, 255, 255);
-    margin-top: 0.5rem /* 16px */;
+    margin-top: 0.5rem
+        /* 16px */
+    ;
     margin-bottom: 1rem
-    
 }
 
 .home .name {
-    font-size: 2.0rem; 
+    font-size: 2.0rem;
     font-weight: 700;
-    color: rgb(211, 129, 28);
+    color: rgb(5, 218, 69);
     text-shadow: 2px 2px 4px rgba(175, 171, 171, 0.5);
 }
 
-.home a{
+.home a {
     color: rgb(255, 255, 255);
     font-size: 1.0rem;
     font-weight: 500;
@@ -81,78 +84,192 @@ body {
     padding: 0.5rem 1rem;
     border-radius: 4px;
     transition: background-color 0.3s ease;
-    background-color: rgb(211, 129, 28);
+    background-color: rgb(5, 160, 51);
 }
 
 .btn:hover {
-    background-color: rgb(136, 79, 10);
+    background-color: rgb(2, 105, 33);
     color: rgb(255, 255, 255);
 }
 
 .mail {
     margin-right: 0.5rem;
     width: 1.2rem;
+    color: rgb(255, 255, 255);
 }
 
 .img-container {
     margin-top: 2rem;
-    
+
 }
 
 .img {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
-    border: 6px solid rgb(211, 129, 28);
-    box-shadow: 0 12px 12px rgba(58, 49, 49, 0.2);
+    border: 6px solid rgb(5, 218, 69);
+
+}
+
+.img2 {
+    width: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 5px 12px rgba(6, 206, 89, 0.2);
 
 }
 
 .about {
-    margin-top: 8rem;
-    text-align: center;
     background-color: rgb(2, 0, 26);
+    padding: 30px;
+    margin-bottom: 30px;
 }
 
-.about h1 {
-    font-size: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(175, 171, 171, 0.5);
+.title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.0rem;
+    margin-bottom: 20px;
 }
 
-@media screen and (max-width: 600px) {
+.about-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.about-container {
+    margin-left: 1.0rem;
+}
+
+.icon-sec {
+    color: rgb(5, 218, 69);
+    /* couleur accent (à adapter selon ton thème) */
+    transform: scale(1.5);
+    padding: 10px;
+}
+
+.section-icon {
+    margin-bottom: 0px;
+}
+
+.section-title {
+    margin-bottom: 0px;
+    font-size: 1.25rem;
+    line-height: 1.0;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.section-description {
+    font-size: 0.7rem;
+    font-weight: 200
+}
+
+.section-text {
+    margin-left: 1rem;
+    text-align: left;
+}
+
+.section-about {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(4, 0, 54);
+    margin-top: 12px;
+    padding: 15px;
+    border-radius: 6px;
+    width: 24rem;
+    box-shadow: 0 4px 7px rgba(89, 207, 109, 0.2);
+}
+
+@media screen and (max-width: 768px) {
     .navbar .nav-link ul {
         display: none;
     }
+
     .home {
-        margin-top: 1.5rem;   
+        margin-top: 1.5rem;
         margin-bottom: 1.5rem;
+        gap: 1rem;
     }
+
     .home .name {
-        font-size: 1.5rem; 
+        font-size: 1.5rem;
     }
+
     .home p {
         font-size: 0.9rem;
         text-align: center;
     }
+
     .btn {
         width: 100%;
         justify-content: center;
     }
+
     .mail {
-    margin-right: 0.5rem;
-    width: 1.2rem;
+        margin-right: 0.5rem;
+        width: 1.2rem;
     }
+
     .btn:hover {
-    background-color: rgb(136, 79, 10);
-    color: rgb(255, 255, 255);
+        background-color: rgb(2, 105, 33);
+        color: rgb(255, 255, 255);
+    }
+
+    .title {
+        font-size: 1.0rem;
+    }
+
+    .img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border: 6px solid rgb(5, 218, 69);
+        box-shadow: 0 12px 12px rgba(58, 49, 49, 0.2);
+    }
+
+    .img2 {
+        display: none;
+    }
+
+    .section-icon {
+        margin-bottom: 1px;
+        font-size: 0.2rem;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+        line-height: 1.0;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    .section-text {
+        margin-left: 1rem;
+        text-align: center;
+    }
+
+    .section-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    box-shadow: 0 4px 7px rgba(89, 207, 109, 0.2);
+    
 }
 }
 
 @media(min-width: 768px) {
     .home {
         flex-direction: row;
-        margin-top: 8rem /* 128px */;
-        margin-bottom: 8rem /* 128px */;
+        margin-top: 8rem
+            /* 128px */
+        ;
+        margin-bottom: 8rem
+            /* 128px */
+        ;
         text-align: left;
         margin-top: 8%;
     }
@@ -160,9 +277,11 @@ body {
     .home .name {
         font-size: 3.0rem;
     }
+
     .img-container {
         margin-left: 2rem;
     }
-    
-    
+
+    .about-div {}
+
 }
