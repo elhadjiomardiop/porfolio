@@ -3,7 +3,7 @@ import img from '../assets/img.jpg'
 
 const Home = () => {
     return (
-        <div className='home'>
+        <div className='home' id='Home'>
             <div>
                 <h1>
                     Bonjour, je suis <br /> <span className='name'>Elhadji Omar Diop</span>
