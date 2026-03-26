@@ -10,9 +10,9 @@ import imgTYPE from "../assets/techno/typescript.svg";
 import imgTAILWIND from "../assets/techno/tailwind.png";
 import imgPRISMA from "../assets/techno/prisma.webp";
 
-// import google from "../assets/companies/google.png";
-// import meta from "../assets/companies/meta.webp";
-// import amazon from "../assets/companies/amazon.png";
+import google from "../assets/companies/google.png";
+import meta from "../assets/companies/meta.webp";
+import amazon from "../assets/companies/amazon.png";
 
 
 
@@ -28,11 +28,47 @@ const skills = [
     { id: 9, name: "Prisma", image: imgPRISMA },
 ];
 
+const experiences = [
+    {
+        id: 1,
+        role: "Software Engineer",
+        company: "Google",
+        period: "Sep 2022 - Présent",
+        description: [
+            "Développement de nouvelles fonctionnalités pour Google Maps.",
+            "Optimisation des performances de l'application.",
+        ],
+        image: google,
+    },
+    {
+        id: 2,
+        role: "Fullstack Developer",
+        company: "Meta",
+        period: "Jan 2021 - Août 2022",
+        description: [
+            "Création d'une plateforme interne de collaboration pour les équipes.",
+            "Mise en place d'une architecture scalable et optimisée.",
+        ],
+        image: meta,
+    },
+    {
+        id: 3,
+        role: "Frontend Developer",
+        company: "Amazon",
+        period: "Mai 2019 - Déc 2020",
+        description: [
+            "Développement d'une interface utilisateur pour Amazon Web Services.",
+            "Implémentation des tests unitaires et E2E.",
+        ],
+        image: amazon,
+    },
+];
+
 const Experiences = () => {
     return (
         <div>
             <Title title="Expériences"/>
-            <div>
+            <div className="exp_global">
                 <div className="experience">
                     {skills.map((skill) => (
                         <div key={skill.id} className="skills">
@@ -48,7 +84,37 @@ const Experiences = () => {
 
                     }
                 </div>
-                <div></div>
+
+
+
+
+                <div className="experience2">
+                    {experiences.map((experience) => (
+                        <div 
+                        key={experience.id} className="section_exp">
+                            <div className="img_exp">
+                                <img
+                                    src={experience.image}
+                                    alt={experience.company}
+                                    className="image_exp"
+                                />
+                                <div className="un_experience">
+                                    <h1>
+                                        {experience.role} , {experience.company}
+                                    </h1>
+                                    <span>{experience.period}</span>
+                                </div>
+                            </div>
+                            <ul>
+                                {experience.description.map((desc , index) => (
+                                    <li key={index}>
+                                        {desc}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     )
