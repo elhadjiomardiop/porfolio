@@ -12,6 +12,8 @@ body {
 
 }
 
+/* ----------------------- Navbar --------------------- */
+
 .navbar {
     padding: 20px;
     display: flex;
@@ -42,6 +44,17 @@ body {
     border-radius: 2px;
     padding: 0px 3px;
 
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/* bouton hamburger */
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
 }
 
 /* HOME */
@@ -278,6 +291,12 @@ body {
     box-shadow: 0 4px 7px rgba(0, 0, 0, 0.87);
 }
 
+.section_exp:hover {
+    background-color: #111827;
+    transition: 0.2s ease-in-out;
+    transform: translateY(-5%);
+}
+
 .section_exp ul {
     list-style-type: disc;
     margin-left: 64px;
@@ -350,6 +369,12 @@ body {
 
 }
 
+.projet_list_name:hover {
+    background-color: rgb(28, 2, 88);
+    transition: 0.3s ease-in-out;
+    transform: translateY(-2%);
+}
+
 .projet_list .projet_list_name .tech {
     display: flex;
     flex-wrap: wrap;
@@ -394,11 +419,37 @@ body {
 
 @media screen and (max-width: 768px) {
     .navbar .nav-link ul {
-        display: none;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 0;
     }
 
     .navbar {
         padding-left: 0.005rem;
+    }
+
+    .nav-link {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgb(4, 0, 54);
+        display: none;
+    }
+
+    /* menu ouvert */
+    .nav-link.active {
+        display: block;
+    }
+
+    .menu-icon {
+        display: block;
+        margin-top: 17px;
+
+    }
+
+    #menu-toggle:checked + .menu-icon + .nav-link {
+        display: block;
     }
 
     .home {
