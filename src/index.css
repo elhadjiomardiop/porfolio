@@ -15,13 +15,14 @@ body {
 /* ----------------------- Navbar --------------------- */
 
 .navbar {
-    padding: 20px;
+    padding: 15px 25px;
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     box-sizing: border-box;
     background-color: rgb(4, 0, 54);
+    position: relative;
 
 }
 
@@ -30,13 +31,13 @@ body {
     font-weight: 500;
     list-style: none;
     text-decoration: none;
+    gap: 20px;
 
 }
 
-.navbar .nav-link ul li a {
-    margin: 0 15px;
-    color: antiquewhite;
-
+.nav-link a {
+    text-decoration: none;
+    color: white;
 }
 
 .navbar .nav-link ul li:hover {
@@ -51,11 +52,35 @@ body {
 }
 
 /* bouton hamburger */
+/* HAMBURGER caché sur desktop */
 .menu-icon {
     display: none;
-    font-size: 28px;
+    flex-direction: column;
     cursor: pointer;
+    gap: 5px;
 }
+
+.menu-icon span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    transition: 0.3s;
+}
+
+/* animation hamburger */
+.menu-icon.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
 
 /* HOME */
 
@@ -429,11 +454,6 @@ body {
     }
 
     .nav-link {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: rgb(4, 0, 54);
         display: none;
     }
 
@@ -442,14 +462,40 @@ body {
         display: block;
     }
 
+    /* afficher hamburger */
     .menu-icon {
-        display: block;
-        margin-top: 17px;
-
+        display: flex;
     }
 
-    #menu-toggle:checked + .menu-icon + .nav-link {
-        display: block;
+    /* menu mobile */
+    .mobile-menu {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background: #111;
+        transform: translateY(-200%);
+        transition: 0.4s ease;
+    }
+
+    .mobile-menu.active {
+        transform: translateY(0);
+    }
+
+    .mobile-menu ul {
+        list-style: none;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .mobile-menu li {
+        margin: 15px 0;
+    }
+
+    .mobile-menu a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
     }
 
     .home {
@@ -594,4 +640,10 @@ body {
 
 html {
     scroll-behavior: smooth;
+}
+
+@media (min-width: 769px) {
+    .mobile-menu {
+        display: none;
+    }
 }

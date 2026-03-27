@@ -1,9 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { useState } from 'react'
 
 const Navbar = () => {
-
     const [open, setOpen] = useState(false)
 
     const closeMenu = () => setOpen(false)
@@ -12,28 +10,34 @@ const Navbar = () => {
         <nav className='navbar'>
             <h2>TOBI</h2>
 
-            {/* bouton hamburger */}
-            <div className="menu-icon" onClick={() => setOpen(!open)}>
-                {open ? "✖" : "☰"}
-            </div>
-
-            <div className={`nav-link ${open ? "active" : ""}`}>
+            {/* menu desktop */}
+            <div className='nav-link'>
                 <ul>
                     <li>
-                        <NavLink to="/" onClick={closeMenu}>Accueil</NavLink>
+                        <NavLink to="/">Accueil</NavLink>
                     </li>
-                    
                     <li>
-                        <NavLink to="/experiences" onClick={closeMenu}>
-                            Mes experiences
-                        </NavLink>
+                        <NavLink to="/experiences">Mes experiences</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/projets">Mes projet</NavLink>
+                    </li>
+                </ul>
+            </div>
 
-                    </li>
-                    <li>
-                        <NavLink to="/projets" onClick={closeMenu}>
-                            Mes projet
-                        </NavLink>
-                    </li>
+            {/* bouton hamburger (mobile uniquement) */}
+            <div className={`menu-icon ${open ? "open" : ""}`} onClick={() => setOpen(!open)}>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            {/* menu mobile */}
+            <div className={`mobile-menu ${open ? "active" : ""}`}>
+                <ul>
+                    <li><NavLink to="/" onClick={closeMenu}>Accueil</NavLink></li>
+                    <li><NavLink to="/experiences" onClick={closeMenu}>Mes experiences</NavLink></li>
+                    <li><NavLink to="/projets" onClick={closeMenu}>Mes projet</NavLink></li>
                 </ul>
             </div>
         </nav>
