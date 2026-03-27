@@ -1,5 +1,6 @@
 import { Mail } from 'lucide-react'
 import img from '../assets/img.jpg'
+import { NavLink } from 'react-router-dom'
 
 const Home = () => {
     return (
@@ -15,9 +16,9 @@ const Home = () => {
                     Avec une expérience de 5 ans dans le domaine.
                 </p>
 
-                <a href="#" className='btn'>
+                <NavLink to="/contact" className='btn'>
                     <Mail className='mail' />Contacter-moi
-                </a>
+                </NavLink>
             </div>
 
             <div className='img-container'>
