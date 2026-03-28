@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-
+    box-sizing: border-box;
     font-family: 'tahoma', sans-serif;
 }
 
@@ -15,7 +15,7 @@ body {
 /* ----------------------- Navbar --------------------- */
 
 .navbar {
-    padding: 15px 25px;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -443,9 +443,11 @@ body {
 
 /* ---------------------------------------- FOOTER GLOBAL ---------------------------------------------- */
 .footer {
-    background: rgb(4, 0, 54);
+    background: #02001a;
     color: white;
-    padding: 50px 10% 20px;
+    padding: 50px 20px 20px; /* 🔥 remplace 10% */
+    width: 100%;
+    overflow-x: hidden; /* 🔥 sécurité anti débordement */
 }
 
 /* CONTAINER */
@@ -453,6 +455,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+    width: 100%;
 }
 
 /* TITRES */
@@ -712,6 +715,7 @@ body {
 
 
 @media screen and (max-width: 768px) {
+
     .navbar .nav-link ul {
         flex-direction: column;
         text-align: center;
@@ -900,7 +904,7 @@ body {
     }
 
     .links a {
-        width: 90%;
+        width: 100%;
         text-align: center;
     }
 
@@ -917,12 +921,22 @@ body {
         text-align: center;
     }
 
-    .footer_contact p {
-        justify-content: center;
+    .footer {
+        padding: 40px 15px; /* 🔥 moins large */
+    }
+
+    .footer_links ul {
+        padding: 0;
     }
 
     .footer_socials .icons {
         justify-content: center;
+        flex-wrap: wrap; /* 🔥 évite débordement */
+    }
+
+    .footer_contact p {
+        justify-content: center;
+        flex-wrap: wrap; /* 🔥 évite débordement */
     }
 
 
