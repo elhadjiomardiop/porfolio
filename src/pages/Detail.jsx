@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { projects } from '../data/Projet_bd'
 import Title from '../Components/Title'
+import { FaGithub, FaYoutube } from 'react-icons/fa'
 
 const Detail = () => {
     const { id } = useParams()
@@ -32,8 +33,8 @@ const Detail = () => {
                     </p>
 
                     <div className="links">
-                        <a href={mon_projet.demoLink} target="_blank">Demo</a>
-                        <a href={mon_projet.repoLink} target="_blank">Git</a>
+                        <a href={mon_projet.demoLink} target="_blank"> <FaYoutube /> </a>
+                        <a href={mon_projet.repoLink} target="_blank"> <FaGithub /> </a>
                     </div>
 
                     <div className="techno">

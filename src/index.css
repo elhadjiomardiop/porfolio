@@ -499,7 +499,7 @@ body {
 .links {
     display: flex;
     gap: 15px;
-    margin-bottom: 20px;
+    flex-wrap: wrap; /* 🔥 permet de passer à la ligne */
 }
 
 .links a {
@@ -509,6 +509,9 @@ body {
     background-color: #053292;
     color: white;
     transition: 0.3s;
+    flex: 1; /* 🔥 prend toute la largeur dispo */
+    text-align: center;
+    min-width: 120px; /* évite que ce soit trop petit */
 }
 
 .links a:hover {
@@ -824,7 +827,7 @@ body {
     }
 
     .links a {
-        width: 100%;
+        width: 90%;
         text-align: center;
     }
 
