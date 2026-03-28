@@ -26,13 +26,14 @@ const aboutSections = [
 
 const About = () => {
     return (
-        <div className="about" id="About">
+        <div className="about">
             <Title title="A propos" />
             <div className="about-div">
                 <div>
                     <img src={img} alt="" className='img2' />
 
                 </div>
+
                 <div className="about-container ml-4 space-y-4">
                     {
                         aboutSections.map((section) => (

@@ -188,7 +188,7 @@ body {
     color: rgb(5, 218, 69);
     /* couleur accent (à adapter selon ton thème) */
     transform: scale(1.5);
-    padding: 10px;
+    padding: 2px;
 }
 
 .section-icon {
