@@ -5,6 +5,7 @@ import Contact from "./pages/Contact";
 import Projets from "./pages/Projet";
 import Experiences from "./pages/Experience";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Detail from "./pages/Detail";
 
 
 function App() {
@@ -18,7 +19,8 @@ function App() {
         {path:"/", element: <Accueil />},
         {path:"/experiences", element: <Experiences />},
         {path:"/projets", element: <Projets />},
-        {path:"/contact", element: <Contact />}
+        {path:"/contact", element: <Contact />},
+        {path:"/projets/:id", element: <Detail />},
         
       ]
     }
