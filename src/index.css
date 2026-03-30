@@ -747,8 +747,8 @@ body {
         top: 0;
         left: 0;
         /* 🔥 au lieu de right */
-        width: 100%;
-        height: 100vh;
+        width: 70%;
+        height: 90vh;
         /* 🔥 prend toute la hauteur */
         background: #111111f8;
         transform: translateY(-100%);
